@@ -1,0 +1,25 @@
+.instructions-container{
+    margin: 1rem 0;
+}
+
+.instructions-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.instructions-header button{
+    width: 2rem;
+    height: 2rem;
+    transition: transform 0.3s ease-out;
+}
+
+.instructions-header h3{
+    margin: 0;
+}
+
+.instructions-body{
+    margin-left: 2rem;
+    overflow: auto;
+    transition: max-height 0.3s ease-out;
+}
