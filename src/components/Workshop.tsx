@@ -54,7 +54,6 @@ function Workshop() {
   const [fat, setFat] = useState("")
   const [carbs, setCarbs] = useState("")
 
-  // Step 3: Complete the submit function here
   const onSubmit = () => {
     const newRow: TableRowData = ({
       name: name, 
@@ -68,8 +67,6 @@ function Workshop() {
  
   }
 
-  // Step 1.2: Add more TextField components in-between the <div className={"input-row"}> tags
-  // Step 2: Add your button right after the TextField components and in-between the <div className={"input-row"}> tags
   return (
     <div className={"workshop"}>
 
@@ -106,8 +103,6 @@ function Workshop() {
         />
 
         <button onClick={onSubmit} id="submit-entry">Submit</button>
-
-        {/* Insert your components here! */}
 
       </div>
 
