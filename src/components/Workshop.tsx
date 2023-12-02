@@ -52,10 +52,24 @@ function Workshop() {
   // Here is the state variable that is tied to our TextField component
   // Add more variables for the other TextFields here!
   const [name, setName] = useState("");
+  const [calories, setCalories] = useState("")
+  const [fat, setFat] = useState("")
+  const [carbs, setCarbs] = useState("")
+  const [protein, setProtein] = useState("")
+
 
   // Step 3: Complete the submit function here
   const onSubmit = () => {
+    const newRow: TableRowData = ({
+      name: name, 
+      calories: parseInt(calories),
+      fat: parseInt(fat),
+      carbs: parseInt(carbs),
+      protein: parseInt(protein)
+  })
 
+    setRows([newRow].concat(rows))
+ 
   }
 
   // Step 1.2: Add more TextField components in-between the <div className={"input-row"}> tags
@@ -70,6 +84,32 @@ function Workshop() {
           value={name}
           onChange={(event) => setName(event.target.value)}
         />
+        <TextField
+          required
+          label={"Calories"}
+          value={calories}
+          onChange={(event) => setCalories(event.target.value)}
+        />
+        <TextField
+          required
+          label={"Fat"}
+          value={fat}
+          onChange={(event) => setFat(event.target.value)}
+        />
+        <TextField
+          required
+          label={"Carbs"}
+          value={carbs}
+          onChange={(event) => setCarbs(event.target.value)}
+        />
+        <TextField
+          required
+          label={"Protein"}
+          value={protein}
+          onChange={(event) => setProtein(event.target.value)}
+        />
+
+        <button onClick={onSubmit} id="submit-entry">Submit</button>
 
         {/* Insert your components here! */}
 
