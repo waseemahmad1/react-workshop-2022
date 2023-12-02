@@ -48,15 +48,11 @@ function Workshop() {
     }
   ]);
 
-  // Step 1.1: Add state variables
-  // Here is the state variable that is tied to our TextField component
-  // Add more variables for the other TextFields here!
   const [name, setName] = useState("");
   const [calories, setCalories] = useState("")
+  const [protein, setProtein] = useState("")
   const [fat, setFat] = useState("")
   const [carbs, setCarbs] = useState("")
-  const [protein, setProtein] = useState("")
-
 
   // Step 3: Complete the submit function here
   const onSubmit = () => {
